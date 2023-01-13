@@ -1,0 +1,55 @@
+#mahbod hashemie
+#barname sazi pishrafte saat : 10:10-12:25
+
+
+#2
+def words(sent,n):
+    number_of_n= 0
+    list_words =[]
+    words=sent.split()
+    for i in words:
+        if len (i)==n:
+            number_of_n +=1
+            list_words.append(i)
+
+    print('number of word with lenth ',number,'=',number_of_n)
+    print('the words are : ',list_words)
+
+sentence = input('Enter a sentence : ')
+number=int(input('enter a number : '))
+
+words(sentence , number)
+
+
+
+
+
+
+#3
+def monthly_payment(Vaam,Nerkhe_bahre,moddat) :
+    
+    n = moddat*12
+    r = Nerkhe_bahre/1200
+
+    if r==0 :
+        monthly_payment = Vaam/n
+    else :
+        monthly_payment =(Vaam*(r*((1+r)**n)))/(((1+r)**n)-1)
+    print(monthly_payment)
+
+kolle_vaam = float(input("meghdare kolle vaam ra vared farmaiid : "))
+Bahre = float(input("nerkhe bahre dar sal ra vared namayidfarmaiid : "))
+Moddat_zaman = float(input("moddat zamane pardakhte vaam ra vared farmaiid : "))
+
+monthly_payment(kolle_vaam,Bahre,Moddat_zaman)
+
+
+
+
+
+#4
+number = int(input("please enter a number : "))
+for i in range(0,number+1,1) :
+    print(i*"*")
+for j in range(number-1,0,-1) :
+    print(j*"*")
